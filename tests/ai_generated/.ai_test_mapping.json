@@ -1,0 +1,64 @@
+{
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::get_db": {
+    "function_name": "get_db",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "get_db",
+    "test_names": [
+      "test_get_db_error_handling",
+      "test_get_db_invalid_input",
+      "test_get_db_success",
+      "test_get_db_yield_empty",
+      "test_get_db_yield_multiple_times",
+      "test_get_db_yield_multiple_times_close"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::signup": {
+    "function_name": "signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "signup",
+    "test_names": [
+      "test_signup_email_exists",
+      "test_signup_invalid_email",
+      "test_signup_invalid_password",
+      "test_signup_invalid_username",
+      "test_signup_password_hashing",
+      "test_signup_username_exists",
+      "test_signup_valid_error_handling",
+      "test_signup_valid_success"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::validate_signup": {
+    "function_name": "validate_signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "validate_signup",
+    "test_names": [
+      "test_validate_signup_empty_email",
+      "test_validate_signup_empty_password",
+      "test_validate_signup_empty_username",
+      "test_validate_signup_invalid_email",
+      "test_validate_signup_invalid_password",
+      "test_validate_signup_invalid_username",
+      "test_validate_signup_valid"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx::Signup": {
+    "function_name": "Signup",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx",
+    "target_file": "ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_frontend_src_Signup.test.ts",
+    "test_id": "Signup",
+    "test_names": [
+      "it_should_handle_empty_email",
+      "it_should_handle_empty_password",
+      "it_should_handle_empty_username",
+      "it_should_handle_failed_signup",
+      "it_should_handle_successful_signup"
+    ]
+  }
+}
