@@ -1,0 +1,34 @@
+{
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::get_db": {
+    "function_name": "get_db",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "get_db",
+    "test_names": [
+      "test_get_db_boundary_value",
+      "test_get_db_edge_case",
+      "test_get_db_error_handling",
+      "test_get_db_invalid_input",
+      "test_get_db_invalid_type",
+      "test_get_db_success",
+      "test_get_db_valid_input"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::signup": {
+    "function_name": "signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "signup",
+    "test_names": [
+      "test_signup_email_exists",
+      "test_signup_error_handling",
+      "test_signup_invalid_email",
+      "test_signup_invalid_password",
+      "test_signup_invalid_username",
+      "test_signup_username_exists",
+      "test_signup_valid_success"
+    ]
+  }
+}
