@@ -31,6 +31,34 @@
       "test_signup_valid_success"
     ]
   },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx::LoginForm": {
+    "function_name": "LoginForm",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx",
+    "target_file": "ai_generated_frontend_src_Login.test.ts",
+    "test_id": "LoginForm",
+    "test_names": [
+      "it_should_call_login_and_set_status_if_valid_email",
+      "it_should_call_validateLoginForm_and_set_error_if_invalid_email"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx::validateLoginForm": {
+    "function_name": "validateLoginForm",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx",
+    "target_file": "ai_generated_frontend_src_Login.test.ts",
+    "test_id": "validateLoginForm",
+    "test_names": [
+      "it_should_return_an_error_if_the_email_contains_but_no_dot_after",
+      "it_should_return_an_error_if_the_email_contains_multiple",
+      "it_should_return_an_error_if_the_email_contains_no",
+      "it_should_return_an_error_if_the_email_does_not_contain",
+      "it_should_return_an_error_if_the_email_is_empty",
+      "it_should_return_an_error_if_the_password_is_empty",
+      "it_should_return_an_error_if_the_password_is_less_than_8_characters",
+      "it_should_return_null_if_the_email_and_password_are_valid"
+    ]
+  },
   "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx::Signup": {
     "function_name": "Signup",
     "language": "typescript",
@@ -38,11 +66,20 @@
     "target_file": "ai_generated_frontend_src_Signup.test.ts",
     "test_id": "Signup",
     "test_names": [
+      "it_should_call_signup_function_with_correct_payload",
+      "it_should_display_error_message_after_failed_signup",
+      "it_should_display_error_message_for_invalid_email",
+      "it_should_display_error_message_for_invalid_password",
+      "it_should_display_error_message_for_invalid_username",
+      "it_should_display_success_message_after_successful_signup",
       "it_should_handle_empty_email",
       "it_should_handle_empty_password",
       "it_should_handle_empty_username",
       "it_should_handle_failed_signup",
-      "it_should_handle_successful_signup"
+      "it_should_handle_successful_signup",
+      "it_should_validate_email_address",
+      "it_should_validate_password_length",
+      "it_should_validate_username_length"
     ]
   }
 }
