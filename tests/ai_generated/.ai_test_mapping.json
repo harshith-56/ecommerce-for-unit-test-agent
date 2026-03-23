@@ -1,4 +1,16 @@
 {
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/auth.py::validate_session": {
+    "function_name": "validate_session",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/auth.py",
+    "target_file": "test_ai_generated_backend_auth.py",
+    "test_id": "validate_session",
+    "test_names": [
+      "test_validate_session_expired_token",
+      "test_validate_session_invalid_token",
+      "test_validate_session_valid_token"
+    ]
+  },
   "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::get_db": {
     "function_name": "get_db",
     "language": "python",
@@ -12,6 +24,21 @@
       "test_get_db_invalid_type",
       "test_get_db_multiple_calls",
       "test_get_db_success"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::normalize_username": {
+    "function_name": "normalize_username",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "normalize_username",
+    "test_names": [
+      "test_normalize_username_long",
+      "test_normalize_username_multiple_dashes",
+      "test_normalize_username_multiple_underscores",
+      "test_normalize_username_non_alphanumeric",
+      "test_normalize_username_short",
+      "test_normalize_username_valid"
     ]
   },
   "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::signup": {
@@ -31,6 +58,69 @@
       "test_signup_valid_success"
     ]
   },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::validate_email": {
+    "function_name": "validate_email",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "validate_email",
+    "test_names": [
+      "test_validate_email_invalid_email_dot_at_end",
+      "test_validate_email_invalid_email_dot_at_start",
+      "test_validate_email_invalid_email_no_at",
+      "test_validate_email_invalid_email_no_domain",
+      "test_validate_email_invalid_email_no_dot_in_domain",
+      "test_validate_email_invalid_email_no_local",
+      "test_validate_email_valid_email"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::validate_signup": {
+    "function_name": "validate_signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "validate_signup",
+    "test_names": [
+      "test_validate_signup_all_invalid",
+      "test_validate_signup_email_invalid",
+      "test_validate_signup_password_no_number",
+      "test_validate_signup_password_too_short",
+      "test_validate_signup_username_too_short",
+      "test_validate_signup_valid"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx::LoginForm": {
+    "function_name": "LoginForm",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx",
+    "target_file": "ai_generated_frontend_src_Login.test.ts",
+    "test_id": "LoginForm",
+    "test_names": [
+      "it_should_handle_an_error_when_logging_in",
+      "it_should_validate_a_password_with_a_length_of_4_characters",
+      "it_should_validate_a_password_with_a_length_of_8_characters",
+      "it_should_validate_a_valid_email_and_password",
+      "it_should_validate_an_email_with_a_dot_after_the_symbol",
+      "it_should_validate_an_invalid_email_and_password"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx::validateLoginForm": {
+    "function_name": "validateLoginForm",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Login.tsx",
+    "target_file": "ai_generated_frontend_src_Login.test.ts",
+    "test_id": "validateLoginForm",
+    "test_names": [
+      "it_returns_error_for_invalid_email",
+      "it_returns_error_for_password_less_than_8_characters",
+      "it_returns_error_for_password_with_8_characters_and_invalid_email",
+      "it_returns_error_for_password_with_less_than_8_characters_and_invalid_email",
+      "it_returns_error_for_password_with_less_than_8_characters_and_valid_email_with_dot",
+      "it_returns_error_for_password_with_less_than_8_characters_and_valid_email_without_dot",
+      "it_returns_error_for_password_with_more_than_8_characters_and_invalid_email",
+      "it_returns_null_for_valid_email_and_password"
+    ]
+  },
   "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx::Signup": {
     "function_name": "Signup",
     "language": "typescript",
@@ -42,7 +132,12 @@
       "it_should_handle_empty_password",
       "it_should_handle_empty_username",
       "it_should_handle_failed_signup",
-      "it_should_handle_successful_signup"
+      "it_should_handle_successful_signup",
+      "it_should_return_error_when_email_is_invalid",
+      "it_should_return_error_when_password_is_less_than_8_characters",
+      "it_should_return_error_when_server_is_down",
+      "it_should_return_error_when_username_is_less_than_4_characters",
+      "it_should_return_success_when_form_is_valid"
     ]
   }
 }
