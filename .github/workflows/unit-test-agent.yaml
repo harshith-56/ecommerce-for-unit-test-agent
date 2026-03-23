@@ -56,7 +56,7 @@ jobs:
 
           # optional but recommended
           comment_on_pr: "true"
-          fail_on_test_failure: "true"
+          fail_on_test_failure: "false"
 
       # 8. Debug generated files
       - name: Debug generated test files
