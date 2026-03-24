@@ -35,13 +35,18 @@
     "target_file": "ai_generated_frontend_src_App.test.ts",
     "test_id": "App",
     "test_names": [
+      "it_handles_invalid_email_input",
+      "it_handles_invalid_password_input",
+      "it_handles_invalid_username_input",
       "it_renders_correctly",
       "it_renders_correctly_with_props",
       "it_renders_correctly_with_props_and_children",
       "it_renders_correctly_with_props_and_children_and_custom_style",
       "it_renders_correctly_with_props_and_children_and_custom_style_and_custom_class",
       "it_renders_correctly_with_props_and_children_and_custom_style_and_custom_class_and_custom_prop",
-      "it_renders_correctly_with_props_and_children_and_custom_style_and_custom_class_and_custom_prop_and_custom_event_handler"
+      "it_renders_correctly_with_props_and_children_and_custom_style_and_custom_class_and_custom_prop_and_custom_event_handler",
+      "it_renders_signup_form",
+      "it_submits_signup_form"
     ]
   },
   "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx::Signup": {
@@ -51,8 +56,14 @@
     "target_file": "ai_generated_frontend_src_Signup.test.ts",
     "test_id": "Signup",
     "test_names": [
+      "it_calls_signup_function_with_invalid_data",
+      "it_calls_signup_function_with_valid_data",
       "it_handles_successful_signup",
-      "it_renders_correctly"
+      "it_renders_correctly",
+      "it_renders_error_message",
+      "it_renders_form_fields",
+      "it_submits_form_with_invalid_data",
+      "it_submits_form_with_valid_data"
     ]
   },
   "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/api.ts::signup": {
@@ -63,7 +74,12 @@
     "test_id": "signup",
     "test_names": [
       "it_should_return_a_network_error_for_a_failed_fetch_call",
+      "it_should_return_a_valid_response_for_a_valid_payload",
       "it_should_return_a_valid_signup_response_for_a_valid_payload",
+      "it_should_return_an_error_for_a_missing_payload",
+      "it_should_return_an_error_for_a_null_payload",
+      "it_should_return_an_error_for_a_payload_with_a_weak_password",
+      "it_should_return_an_error_for_a_payload_with_an_invalid_email",
       "it_should_return_an_error_for_an_invalid_payload"
     ]
   }
