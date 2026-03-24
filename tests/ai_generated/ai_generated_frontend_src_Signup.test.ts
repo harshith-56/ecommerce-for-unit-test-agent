@@ -36,19 +36,20 @@ it('handles successful signup', async () => {
 jest.mock('../../ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/api');
 
 describe('Signup', () => {
-  it('renders correctly', () => {
+
+it('renders correctly', () => {
     render(<Signup />);
     expect(screen.getByText('Create account')).toBeInTheDocument();
   });
 
-  it('renders form fields', () => {
+it('renders form fields', () => {
     render(<Signup />);
     expect(screen.getByPlaceholderText('Username')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Email')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Password')).toBeInTheDocument();
   });
 
-  it('submits form with valid data', async () => {
+it('submits form with valid data', async () => {
     render(<Signup />);
     fireEvent.change(screen.getByPlaceholderText('Username'), {
       target: { value: 'testuser' },
@@ -65,7 +66,7 @@ describe('Signup', () => {
     );
   });
 
-  it('submits form with invalid data', async () => {
+it('submits form with invalid data', async () => {
     render(<Signup />);
     fireEvent.change(screen.getByPlaceholderText('Username'), {
       target: { value: '' },
@@ -82,7 +83,7 @@ describe('Signup', () => {
     );
   });
 
-  it('renders error message', async () => {
+it('renders error message', async () => {
     render(<Signup />);
     fireEvent.click(screen.getByRole('button'));
     await waitFor(() =>
@@ -90,7 +91,7 @@ describe('Signup', () => {
     );
   });
 
-  it('calls signup function with valid data', async () => {
+it('calls signup function with valid data', async () => {
     const signupMock = jest.mocked(signup);
     signupMock.mockResolvedValue({ success: true });
     render(<Signup />);
@@ -109,7 +110,7 @@ describe('Signup', () => {
     );
   });
 
-  it('calls signup function with invalid data', async () => {
+it('calls signup function with invalid data', async () => {
     const signupMock = jest.mocked(signup);
     signupMock.mockResolvedValue({ success: false, error: 'Could not reach the server.' });
     render(<Signup />);
@@ -125,6 +126,149 @@ describe('Signup', () => {
     fireEvent.click(screen.getByRole('button'));
     await waitFor(() =>
       expect(signupMock).toHaveBeenCalledTimes(1)
+    );
+  });
+});
+
+describe('Signup component', () => {
+  it('renders correctly with valid form data', () => {
+    render(<Signup />);
+    expect(screen.getByText('Create account')).toBeInTheDocument();
+  });
+
+  it('renders correctly with invalid form data (username too short)', () => {
+    render(<Signup />);
+    const usernameInput = screen.getByPlaceholderText('Username');
+    fireEvent.change(usernameInput, {
+      target: { value: 'ab' },
+    });
+    expect(screen.getByText('Username must be at least 4 characters.')).toBeInTheDocument();
+  });
+
+  it('renders correctly with invalid form data (email invalid)', () => {
+    render(<Signup />);
+    const emailInput = screen.getByPlaceholderText('Email');
+    fireEvent.change(emailInput, {
+      target: { value: 'a@b' },
+    });
+    expect(screen.getByText('Please enter a valid email address.')).toBeInTheDocument();
+  });
+
+  it('renders correctly with invalid form data (password too short)', () => {
+    render(<Signup />);
+    const passwordInput = screen.getByPlaceholderText('Password');
+    fireEvent.change(passwordInput, {
+      target: { value: '1234' },
+    });
+    expect(screen.getByText('Password must be at least 8 characters.')).toBeInTheDocument();
+  });
+
+  it('handles user interaction with valid form data', async () => {
+    render(<Signup />);
+    const usernameInput = screen.getByPlaceholderText('Username');
+    fireEvent.change(usernameInput, {
+      target: { value: 'testuser' },
+    });
+    const emailInput = screen.getByPlaceholderText('Email');
+    fireEvent.change(emailInput, {
+      target: { value: 'a@b.com' },
+    });
+    const passwordInput = screen.getByPlaceholderText('Password');
+    fireEvent.change(passwordInput, {
+      target: { value: 'validpass123' },
+    });
+    const submitButton = screen.getByRole('button');
+    fireEvent.click(submitButton);
+    await waitFor(() =>
+      expect(screen.getByText('success')).toBeInTheDocument()
+    );
+  });
+
+  it('handles user interaction with invalid form data (username too short)', async () => {
+    render(<Signup />);
+    const usernameInput = screen.getByPlaceholderText('Username');
+    fireEvent.change(usernameInput, {
+      target: { value: 'ab' },
+    });
+    const emailInput = screen.getByPlaceholderText('Email');
+    fireEvent.change(emailInput, {
+      target: { value: 'a@b.com' },
+    });
+    const passwordInput = screen.getByPlaceholderText('Password');
+    fireEvent.change(passwordInput, {
+      target: { value: 'validpass123' },
+    });
+    const submitButton = screen.getByRole('button');
+    fireEvent.click(submitButton);
+    await waitFor(() =>
+      expect(screen.getByText('Username must be at least 4 characters.')).toBeInTheDocument()
+    );
+  });
+
+  it('handles user interaction with invalid form data (email invalid)', async () => {
+    render(<Signup />);
+    const usernameInput = screen.getByPlaceholderText('Username');
+    fireEvent.change(usernameInput, {
+      target: { value: 'testuser' },
+    });
+    const emailInput = screen.getByPlaceholderText('Email');
+    fireEvent.change(emailInput, {
+      target: { value: 'a@b' },
+    });
+    const passwordInput = screen.getByPlaceholderText('Password');
+    fireEvent.change(passwordInput, {
+      target: { value: 'validpass123' },
+    });
+    const submitButton = screen.getByRole('button');
+    fireEvent.click(submitButton);
+    await waitFor(() =>
+      expect(screen.getByText('Please enter a valid email address.')).toBeInTheDocument()
+    );
+  });
+
+  it('handles user interaction with invalid form data (password too short)', async () => {
+    render(<Signup />);
+    const usernameInput = screen.getByPlaceholderText('Username');
+    fireEvent.change(usernameInput, {
+      target: { value: 'testuser' },
+    });
+    const emailInput = screen.getByPlaceholderText('Email');
+    fireEvent.change(emailInput, {
+      target: { value: 'a@b.com' },
+    });
+    const passwordInput = screen.getByPlaceholderText('Password');
+    fireEvent.change(passwordInput, {
+      target: { value: '1234' },
+    });
+    const submitButton = screen.getByRole('button');
+    fireEvent.click(submitButton);
+    await waitFor(() =>
+      expect(screen.getByText('Password must be at least 8 characters.')).toBeInTheDocument()
+    );
+  });
+
+  it('handles server error', async () => {
+    const signupMock = jest.fn(() => Promise.reject(new Error('Server error')));
+    jest.mock('../../ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/api.ts', () => ({
+      signup: signupMock,
+    }));
+    render(<Signup />);
+    const usernameInput = screen.getByPlaceholderText('Username');
+    fireEvent.change(usernameInput, {
+      target: { value: 'testuser' },
+    });
+    const emailInput = screen.getByPlaceholderText('Email');
+    fireEvent.change(emailInput, {
+      target: { value: 'a@b.com' },
+    });
+    const passwordInput = screen.getByPlaceholderText('Password');
+    fireEvent.change(passwordInput, {
+      target: { value: 'validpass123' },
+    });
+    const submitButton = screen.getByRole('button');
+    fireEvent.click(submitButton);
+    await waitFor(() =>
+      expect(screen.getByText('Could not reach the server.')).toBeInTheDocument()
     );
   });
 });
