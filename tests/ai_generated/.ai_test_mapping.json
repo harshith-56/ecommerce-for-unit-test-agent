@@ -1,4 +1,38 @@
 {
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/auth.py::create_session": {
+    "function_name": "create_session",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/auth.py",
+    "target_file": "test_ai_generated_backend_auth.py",
+    "test_id": "create_session",
+    "test_names": [
+      "test_create_session_empty_user_id",
+      "test_create_session_invalid_user_id",
+      "test_create_session_negative_user_id",
+      "test_create_session_session_creation",
+      "test_create_session_session_expiration",
+      "test_create_session_session_token_generation",
+      "test_create_session_valid_user_id",
+      "test_create_session_zero_user_id"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/auth.py::validate_session": {
+    "function_name": "validate_session",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/auth.py",
+    "target_file": "test_ai_generated_backend_auth.py",
+    "test_id": "validate_session",
+    "test_names": [
+      "test_validate_session_empty_token",
+      "test_validate_session_expired_token",
+      "test_validate_session_invalid_token",
+      "test_validate_session_invalid_token_type",
+      "test_validate_session_none_token",
+      "test_validate_session_token_with_invalid_expires_at",
+      "test_validate_session_token_with_invalid_user_id",
+      "test_validate_session_valid_token"
+    ]
+  },
   "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::get_db": {
     "function_name": "get_db",
     "language": "python",
@@ -58,8 +92,17 @@
     "test_names": [
       "it_calls_signup_function_with_invalid_data",
       "it_calls_signup_function_with_valid_data",
+      "it_handles_server_error",
       "it_handles_successful_signup",
+      "it_handles_user_interaction_with_invalid_form_data_email_invalid",
+      "it_handles_user_interaction_with_invalid_form_data_password_too_short",
+      "it_handles_user_interaction_with_invalid_form_data_username_too_short",
+      "it_handles_user_interaction_with_valid_form_data",
       "it_renders_correctly",
+      "it_renders_correctly_with_invalid_form_data_email_invalid",
+      "it_renders_correctly_with_invalid_form_data_password_too_short",
+      "it_renders_correctly_with_invalid_form_data_username_too_short",
+      "it_renders_correctly_with_valid_form_data",
       "it_renders_error_message",
       "it_renders_form_fields",
       "it_submits_form_with_invalid_data",
@@ -81,6 +124,50 @@
       "it_should_return_an_error_for_a_payload_with_a_weak_password",
       "it_should_return_an_error_for_a_payload_with_an_invalid_email",
       "it_should_return_an_error_for_an_invalid_payload"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/login.tsx::LoginForm": {
+    "function_name": "LoginForm",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/login.tsx",
+    "target_file": "ai_generated_frontend_src_login.test.ts",
+    "test_id": "LoginForm",
+    "test_names": [
+      "it_calls_login_with_correct_arguments_when_form_is_submitted_and_validateLoginForm_returns_null",
+      "it_calls_validateLoginForm_with_correct_arguments_when_form_is_submitted",
+      "it_displays_error_message_when_form_is_submitted_with_invalid_email",
+      "it_displays_error_message_when_form_is_submitted_with_password_less_than_8_characters",
+      "it_renders_correctly"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/login.tsx::login": {
+    "function_name": "login",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/login.tsx",
+    "target_file": "ai_generated_frontend_src_login.test.ts",
+    "test_id": "login",
+    "test_names": [
+      "it_should_return_a_successful_login_response_with_valid_payload",
+      "it_should_return_an_error_response_with_invalid_payload",
+      "it_should_return_an_error_response_with_invalid_token",
+      "it_should_return_an_error_response_with_network_error"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/login.tsx::validateLoginForm": {
+    "function_name": "validateLoginForm",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/login.tsx",
+    "target_file": "ai_generated_frontend_src_login.test.ts",
+    "test_id": "validateLoginForm",
+    "test_names": [
+      "it_should_return_an_error_when_email_does_not_contain",
+      "it_should_return_an_error_when_email_is_empty",
+      "it_should_return_an_error_when_email_is_invalid",
+      "it_should_return_an_error_when_password_is_empty",
+      "it_should_return_an_error_when_password_is_too_short",
+      "it_should_return_an_error_when_password_is_too_short_boundary_case",
+      "it_should_return_an_error_when_password_is_too_short_edge_case",
+      "it_should_return_null_when_email_and_password_are_valid"
     ]
   }
 }
