@@ -13,22 +13,35 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setLoading(true);
-    setStatus(null);
+  event.preventDefault();
 
-    try {
-      const data = await signup(form);
-      setStatus(data);
+  if (form.username.trim().length < 4) {
+    setStatus({ success: false, error: "Username must be at least 4 characters." });
+    return;
+  }
+  if (!form.email.includes("@") || !form.email.includes(".")) {
+    setStatus({ success: false, error: "Please enter a valid email address." });
+    return;
+  }
+  if (form.password.length < 8) {
+    setStatus({ success: false, error: "Password must be at least 8 characters." });
+    return;
+  }
 
-      if (data.success) {
-        setForm(initialForm);
-      }
-    } catch {
-      setStatus({ success: false, error: "Could not reach the server." });
-    } finally {
-      setLoading(false);
+  setLoading(true);
+  setStatus(null);
+
+  try {
+    const data = await signup(form);
+    setStatus(data);
+    if (data.success) {
+      setForm(initialForm);
     }
+  } catch {
+    setStatus({ success: false, error: "Could not reach the server." });
+  } finally {
+    setLoading(false);
+  }
   }
 
   return (
