@@ -34,7 +34,7 @@ def validate_signup(data: SignupRequest) -> str | None:
         return "Password must be at least 8 characters long."
     return None
 
-
+#signup endpoint for user registration
 @app.post("/signup", response_model=SignupResponse)
 def signup(payload: SignupRequest, db: Session = Depends(get_db)):
     error = validate_signup(payload)
