@@ -1,0 +1,50 @@
+{
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::get_db": {
+    "function_name": "get_db",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "get_db",
+    "test_names": [
+      "test_get_db_close_db",
+      "test_get_db_finally_block",
+      "test_get_db_invalid_input",
+      "test_get_db_multiple_yield",
+      "test_get_db_success",
+      "test_get_db_yield_multiple_times"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::signup": {
+    "function_name": "signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "signup",
+    "test_names": [
+      "test_signup_error_email_exists",
+      "test_signup_error_email_invalid",
+      "test_signup_error_invalid_db",
+      "test_signup_error_invalid_payload",
+      "test_signup_error_password_too_short",
+      "test_signup_error_username_exists",
+      "test_signup_error_username_too_short",
+      "test_signup_success"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::validate_signup": {
+    "function_name": "validate_signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_ECOMMERCE_UNIT_TEST_AGENT_TESTING_backend_main.py",
+    "test_id": "validate_signup",
+    "test_names": [
+      "test_validate_signup_empty_email",
+      "test_validate_signup_empty_password",
+      "test_validate_signup_empty_username",
+      "test_validate_signup_invalid_email",
+      "test_validate_signup_invalid_password",
+      "test_validate_signup_invalid_username",
+      "test_validate_signup_valid"
+    ]
+  }
+}
