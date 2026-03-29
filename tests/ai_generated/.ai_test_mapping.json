@@ -1,0 +1,44 @@
+{
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::get_db": {
+    "function_name": "get_db",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "get_db",
+    "test_names": [
+      "test_get_db_error_handling",
+      "test_get_db_multiple_calls",
+      "test_get_db_success"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::signup": {
+    "function_name": "signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "signup",
+    "test_names": [
+      "test_signup_db_commit_error",
+      "test_signup_db_rollback_error",
+      "test_signup_email_invalid",
+      "test_signup_invalid_payload",
+      "test_signup_password_invalid",
+      "test_signup_username_or_email_exists",
+      "test_signup_valid_payload"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx::Signup": {
+    "function_name": "Signup",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx",
+    "target_file": "ai_generated_frontend_src_Signup.test.ts",
+    "test_id": "Signup",
+    "test_names": [
+      "it_should_call_signup_with_correct_payload_on_submit",
+      "it_should_display_error_message_when_signup_fails",
+      "it_should_not_call_signup_when_form_is_empty",
+      "it_should_not_call_signup_when_form_is_invalid",
+      "it_should_not_call_signup_when_loading_is_true"
+    ]
+  }
+}
