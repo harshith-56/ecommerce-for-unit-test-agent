@@ -1,0 +1,43 @@
+{
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::signup": {
+    "function_name": "signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "signup",
+    "test_names": [
+      "test_signup_failure_email_exists",
+      "test_signup_failure_email_invalid",
+      "test_signup_failure_password_too_short",
+      "test_signup_failure_username_exists",
+      "test_signup_failure_username_too_short",
+      "test_signup_success"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/App.tsx::App": {
+    "function_name": "App",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/App.tsx",
+    "target_file": "ai_generated_frontend_src_App.test.ts",
+    "test_id": "App",
+    "test_names": [
+      "it_renders_correctly",
+      "it_renders_error_message_on_form_submission",
+      "it_renders_signup_form",
+      "it_renders_success_message_on_valid_form_submission"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/api.ts::signup": {
+    "function_name": "signup",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/api.ts",
+    "target_file": "ai_generated_frontend_src_api.test.ts",
+    "test_id": "signup",
+    "test_names": [
+      "it_should_return_a_network_error_response_for_a_network_error",
+      "it_should_return_a_server_error_response_for_a_server_error",
+      "it_should_return_a_valid_response_for_a_valid_payload",
+      "it_should_return_an_error_response_for_an_invalid_payload"
+    ]
+  }
+}
