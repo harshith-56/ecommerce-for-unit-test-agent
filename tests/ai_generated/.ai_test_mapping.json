@@ -1,0 +1,96 @@
+{
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::signup": {
+    "function_name": "signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "signup",
+    "test_names": [
+      "test_signup_error_email_exists",
+      "test_signup_error_email_invalid",
+      "test_signup_error_password_too_short",
+      "test_signup_error_username_exists",
+      "test_signup_error_username_too_short",
+      "test_signup_success"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py::validate_signup": {
+    "function_name": "validate_signup",
+    "language": "python",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/backend/main.py",
+    "target_file": "test_ai_generated_backend_main.py",
+    "test_id": "validate_signup",
+    "test_names": [
+      "test_validate_signup_email_invalid",
+      "test_validate_signup_password_too_short",
+      "test_validate_signup_username_too_short"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/App.tsx::App": {
+    "function_name": "App",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/App.tsx",
+    "target_file": "ai_generated_frontend_src_App.test.ts",
+    "test_id": "App",
+    "test_names": [
+      "it_renders_Signup_component",
+      "it_renders_Signup_component_with_correct_accessibility_attributes",
+      "it_renders_Signup_component_with_correct_aria_attributes",
+      "it_renders_Signup_component_with_correct_attributes",
+      "it_renders_Signup_component_with_correct_children",
+      "it_renders_Signup_component_with_correct_classes",
+      "it_renders_Signup_component_with_correct_keyboard_navigation_attributes",
+      "it_renders_Signup_component_with_correct_props",
+      "it_renders_Signup_component_with_correct_role",
+      "it_renders_Signup_component_with_correct_styles",
+      "it_renders_correctly",
+      "it_renders_error_message_when_error_occurs",
+      "it_renders_error_message_when_signup_fails",
+      "it_renders_no_error",
+      "it_renders_success_message_when_signup_is_successful"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx::Signup": {
+    "function_name": "Signup",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/Signup.tsx",
+    "target_file": "ai_generated_frontend_src_Signup.test.ts",
+    "test_id": "Signup",
+    "test_names": [
+      "it_displays_error_message_on_failed_signup",
+      "it_handles_disabled_submit_button",
+      "it_handles_failed_signup",
+      "it_handles_invalid_form_submission",
+      "it_handles_invalid_signup",
+      "it_handles_successful_signup",
+      "it_handles_user_interaction",
+      "it_renders_correctly",
+      "it_resets_form_on_successful_signup",
+      "it_submits_form_on_valid_input"
+    ]
+  },
+  "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/api.ts::signup": {
+    "function_name": "signup",
+    "language": "typescript",
+    "source_file": "ECOMMERCE_UNIT_TEST_AGENT_TESTING/frontend/src/api.ts",
+    "target_file": "ai_generated_frontend_src_api.test.ts",
+    "test_id": "signup",
+    "test_names": [
+      "it_returns_error_response_for_JSON_parsing_error",
+      "it_returns_error_response_for_invalid_email",
+      "it_returns_error_response_for_invalid_payload",
+      "it_returns_error_response_for_invalid_username",
+      "it_returns_error_response_for_missing_required_fields",
+      "it_returns_error_response_for_network_error",
+      "it_returns_error_response_for_short_password",
+      "it_returns_valid_response_for_valid_payload",
+      "it_should_return_a_successful_signup_response_for_valid_payload",
+      "it_should_return_an_error_response_for_duplicate_email",
+      "it_should_return_an_error_response_for_duplicate_username",
+      "it_should_return_an_error_response_for_invalid_email",
+      "it_should_return_an_error_response_for_invalid_payload",
+      "it_should_return_an_error_response_for_missing_required_fields",
+      "it_should_return_an_error_response_for_weak_password"
+    ]
+  }
+}
